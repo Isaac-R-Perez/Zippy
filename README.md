@@ -3,6 +3,9 @@ Zippy is a 2D twin-stick arcade game built for Windows. Inspired by Handmade Her
 
 In this game the player can move, shoot, and dash. Dashing is done in the direction you last moved, not where you are aiming! While dashing, the player can collide with bullets safely and send them back at enemies. You and the enemies become stronger as the waves progress until Zappy finally appears on Wave 13. Defeat Zappy and you win!
 
+# Gamplay Demo
+https://youtu.be/8K6ONOFbeAI
+
 # How To Play
 I have provided a pre-compiled version within a zip file built on my machine, so all you'd need to do is clone the repository onto a Windows machine then unzip the folder and run the executable inside to start the game.
 
