@@ -58,6 +58,8 @@ Zippy is split into two pieces, the platform code (win32_platform.cpp) and the g
 
 The game code is where all of the game-specific functionality is done, such as drawing entities or text into a bitmap for rendering, loading textures, processing user input, processing collision, updating all entities, managing the game's state, and much much more. Basically, anything that is independent from the platform the game is running on is done within IGame.dll.
 
+The in-game FPS display shows the FPS data captured BEFORE any sleeping is done. The game's actual update and rendering is locked to 60 FPS or 16.666 milliseconds.
+
 Most of the game's systems were built from scratch. Including the entity management system, the arena memory allocator, entity collisions, software rendering, text rendering, user input, bitmap texture loading, the saving and loading system, vector and matrix math functions within my own math library, and more.
 
 However, I use a couple of standard libraries and several Windows libraries where necessary. For gamepad support I used XInput and for async multi-threaded audio support I used XAudio 2. My psuedo-random number generator for the game is a 32-bit Mersenne-Twister from the random standard library and it is initialized with the current time using the chrono standard library functions.
