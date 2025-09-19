@@ -56,9 +56,9 @@ Back - Display Debug Info
 # Zippy Software Details
 Zippy is split into two pieces, the platform code (win32_platform.cpp) and the game code (IGame.cpp). win32_platform is the main file and it is what gets compiled into Zippy.exe. The platform code is where all Windows functionality is housed, like window mangement, audio control, gathering user input, and allocating memory. This section is where the game is launched and closed from. The platform code loads Zippy's game code dynamically from IGame.dll. 
 
-The game code is where all of the game-specific functionality is done, such as drawing entities or text into a bitmap for rendering, loading textures, processing user input, processing collision, updating all entities, managing the game's state, and much much more. Basically, anything that is independent from the platform the game is running on is done within IGame.dll.
+The game code is where all of the game-specific functionality is done, such as drawing entities or text into a bitmap for rendering, loading textures, processing user input, processing collision, updating all entities, managing the game's state, and much much more. Basically, anything that is independent from the platform the game is running on is done within IGame.dll. However, both layers can communicate with each other through functions. The game code can call passed platform functions and the platform can call passed game code functions.
 
-The in-game FPS display shows the FPS data captured BEFORE any sleeping is done. The game's actual update and rendering is locked to 60 FPS or 16.666 milliseconds.
+The in-game FPS displayed in debug info shows the FPS data captured from last frame BEFORE any sleeping is done. The game's actual update and rendering is locked to 60 FPS or 16.666 milliseconds.
 
 Most of the game's systems were built from scratch. Including the entity management system, the arena memory allocator, entity collisions, software rendering, text rendering, user input, bitmap texture loading, the saving and loading system, vector and matrix math functions within my own math library, and more.
 
